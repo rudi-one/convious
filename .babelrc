@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "tests": "./__tests__",
+          "components": "./src/components",
+          "store": "./src/redux",
+          "screens": "./src/screens",
+          "navigation": "./src/navigation/",
+          "api": "./src/api",
+          "src": "./src"
+        }
+      }
+    ]
+  ]
+}

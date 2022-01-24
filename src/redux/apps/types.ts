@@ -1,0 +1,52 @@
+export type AppsState = {
+  appsCollection: AppsCollection[];
+  offset: number;
+  term: string;
+};
+
+export interface AppsCollection {
+  artworkUrl60: string;
+  artworkUrl512: string;
+  artworkUrl100: string;
+  artistViewUrl: string;
+  screenshotUrls: string[];
+  ipadScreenshotUrls: string[];
+  appletvScreenshotUrls: [];
+  isGameCenterEnabled: false;
+  features: [];
+  supportedDevices: string[];
+  advisories: string[];
+  kind: string;
+  trackViewUrl: string;
+  minimumOsVersion: string;
+  trackCensoredName: string;
+  languageCodesISO2A: string[];
+  fileSizeBytes: string;
+  sellerUrl: string;
+  formattedPrice: string;
+  contentAdvisoryRating: string;
+  averageUserRatingForCurrentVersion: number;
+  userRatingCountForCurrentVersion: number;
+  averageUserRating: number;
+  trackContentRating: string;
+  bundleId: string;
+  primaryGenreId: number;
+  trackId: number;
+  trackName: string;
+  releaseDate: string;
+  primaryGenreName: string;
+  genreIds: number[];
+  isVppDeviceBasedLicensingEnabled: boolean;
+  currentVersionReleaseDate: string;
+  sellerName: string;
+  releaseNotes: string;
+  currency: string;
+  description: string;
+  artistId: number;
+  artistName: string;
+  genres: string[];
+  price: number;
+  version: string;
+  wrapperType: string;
+  userRatingCount: number;
+}
