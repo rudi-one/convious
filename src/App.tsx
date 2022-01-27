@@ -1,6 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {ErrorBoundary} from 'react-error-boundary';
+import {LogBox} from 'react-native';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -10,6 +11,9 @@ import {RootNavigator} from 'src/navigation/RootNavigator';
 import {logJsError} from 'src/utils/helpers';
 import {persistor, store} from 'store/store';
 import SafeArea from './components/SafeArea';
+
+// suppress NativeEventEmitter earning
+LogBox.ignoreAllLogs(true);
 
 const theme = {
   ...DefaultTheme,
