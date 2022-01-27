@@ -32,6 +32,13 @@ export const updateFilters = createAction(
   }),
 )();
 
+export const clearFiters = createAction(
+  'CLEAR_FILTERS',
+  (checked?: boolean) => ({
+    checked,
+  }),
+)();
+
 export type AppsActionTypes = ActionType<
   | typeof setAppsCollection
   | typeof clearAppsCollection
@@ -40,4 +47,5 @@ export type AppsActionTypes = ActionType<
   | typeof fetchApps
   | typeof setFilters
   | typeof updateFilters
+  | typeof clearFiters
 >;

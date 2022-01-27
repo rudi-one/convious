@@ -5,7 +5,13 @@ import {mockAppCollection1} from 'src/mocks/mockApps';
 
 describe('<ListElement /> tests', () => {
   it('should match ListElement component snapshot', () => {
-    const component = <ListElement item={mockAppCollection1} />;
+    const component = (
+      <ListElement
+        item={mockAppCollection1}
+        imageUrl={''}
+        navigate={() => {}}
+      />
+    );
 
     expect(render(component)).toMatchSnapshot();
   });

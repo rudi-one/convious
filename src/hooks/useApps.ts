@@ -1,11 +1,10 @@
-import {useCallback, useEffect} from 'react';
+import {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Filter} from 'src/components/Filters/types';
-import {APPS_CATEGORIES} from 'src/utils/consts';
 import {
   clearAppsCollection,
+  clearFiters,
   fetchApps,
-  setFilters,
   setOffset,
   setTerm,
   updateFilters,
@@ -23,11 +22,7 @@ const useApps = () => {
 
   const clear = useCallback(
     (checked?: boolean) => {
-      const filters: Filter[] = APPS_CATEGORIES.map(category => ({
-        name: category,
-        checked: !!checked,
-      }));
-      dispatch(setFilters(filters));
+      dispatch(clearFiters(checked));
     },
     [dispatch],
   );
@@ -46,15 +41,11 @@ const useApps = () => {
         dispatch(setOffset(0));
         dispatch(setTerm(text));
         dispatch(fetchApps());
-        clear(true);
+        dispatch(clearFiters(true));
       }
     },
-    [clear, dispatch],
+    [dispatch],
   );
-
-  useEffect(() => {
-    clear(true);
-  }, [clear]);
 
   return {apps, getApps, search, filters, filter, clear};
 };

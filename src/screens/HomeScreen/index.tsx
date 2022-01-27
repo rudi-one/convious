@@ -28,8 +28,14 @@ export function HomeScreen() {
         options={{
           title: 'App Store Apps',
           tabBarLabel: 'Apps',
-          tabBarIcon: () => {
-            return <IconButton icon="apple" color={Colors.red500} size={26} />;
+          tabBarIcon: ({focused}) => {
+            return (
+              <IconButton
+                icon="apple"
+                color={focused ? Colors.red500 : Colors.grey700}
+                size={26}
+              />
+            );
           },
           tabBarLabelStyle: tabBarLabelStyle,
         }}
@@ -40,9 +46,13 @@ export function HomeScreen() {
         options={{
           title: 'Music',
           tabBarLabel: 'Music',
-          tabBarIcon: () => {
+          tabBarIcon: ({focused}) => {
             return (
-              <IconButton icon="music-note" color={Colors.red500} size={26} />
+              <IconButton
+                icon="music-note"
+                color={focused ? Colors.red500 : Colors.grey700}
+                size={26}
+              />
             );
           },
           tabBarLabelStyle: tabBarLabelStyle,
@@ -54,11 +64,11 @@ export function HomeScreen() {
         options={{
           title: 'Credits',
           tabBarLabel: 'Credits',
-          tabBarIcon: () => {
+          tabBarIcon: ({focused}) => {
             return (
               <IconButton
                 icon="account-check"
-                color={Colors.red500}
+                color={focused ? Colors.red500 : Colors.grey700}
                 size={26}
               />
             );

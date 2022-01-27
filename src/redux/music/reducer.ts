@@ -1,7 +1,9 @@
 import {produce} from 'immer';
+import {MUSIC_CATEGORIES} from 'src/utils/consts';
 import {getType} from 'typesafe-actions';
 import {
   clearMusicCollection,
+  clearMusicFilters,
   MusicActionTypes,
   setMusicCollection,
   setMusicFilters,
@@ -57,6 +59,15 @@ const MusicReducer = (state = initalState, action: MusicActionTypes) => {
             filterToUpdate.name === filter.name
               ? filterToUpdate.checked
               : filter.checked,
+        }));
+        break;
+      }
+      case getType(clearMusicFilters): {
+        const checked = action.payload.checked;
+
+        state.filters = MUSIC_CATEGORIES.map(category => ({
+          name: category,
+          checked: !!checked,
         }));
         break;
       }

@@ -7,10 +7,11 @@ export interface CommonCollection {
   trackCensoredName: string;
   trackId: number;
   trackName: string;
+  trackPrice?: number;
   releaseDate: string;
   primaryGenreName: string;
   currency: string;
   artistId: number;
   artistName: string;
-  wrapperType: string;
+  wrapperType?: string;
 }

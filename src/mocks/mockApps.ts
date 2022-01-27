@@ -286,14 +286,84 @@ export const mockAppCollection2: AppCollection = {
 
 export const mockAppsCollection = [mockAppCollection1, mockAppCollection2];
 
+export const mockAppsFiltersChecked = [
+  {checked: true, name: 'Travel'},
+  {checked: true, name: 'Lifestyle'},
+  {
+    checked: true,
+    name: 'Photo & Video',
+  },
+  {checked: true, name: 'Games'},
+  {checked: true, name: 'Word'},
+  {
+    checked: true,
+    name: 'Education',
+  },
+  {checked: true, name: 'Trivia'},
+  {checked: true, name: 'Family'},
+  {
+    checked: true,
+    name: 'Entertainment',
+  },
+  {checked: true, name: 'Card'},
+  {checked: true, name: 'Puzzle'},
+  {
+    checked: true,
+    name: 'Casual',
+  },
+  {checked: true, name: 'Utilities'},
+  {checked: true, name: 'Business'},
+  {
+    checked: true,
+    name: 'Shopping',
+  },
+  {checked: true, name: 'Finance'},
+];
+
+export const mockAppsFiltersUnchecked = [
+  {checked: false, name: 'Travel'},
+  {
+    checked: false,
+    name: 'Lifestyle',
+  },
+  {checked: false, name: 'Photo & Video'},
+  {checked: false, name: 'Games'},
+  {
+    checked: false,
+    name: 'Word',
+  },
+  {checked: false, name: 'Education'},
+  {checked: false, name: 'Trivia'},
+  {
+    checked: false,
+    name: 'Family',
+  },
+  {checked: false, name: 'Entertainment'},
+  {checked: false, name: 'Card'},
+  {
+    checked: false,
+    name: 'Puzzle',
+  },
+  {checked: false, name: 'Casual'},
+  {checked: false, name: 'Utilities'},
+  {
+    checked: false,
+    name: 'Business',
+  },
+  {checked: false, name: 'Shopping'},
+  {checked: false, name: 'Finance'},
+];
+
 export const mockAppsState: AppsState = {
   appsCollection: mockAppsCollection,
   offset: 0,
   term: 'uber',
+  filters: mockAppsFiltersChecked,
 };
 
 export const mockEmptyAppsState: AppsState = {
   appsCollection: [],
   offset: 0,
   term: '',
+  filters: [],
 };

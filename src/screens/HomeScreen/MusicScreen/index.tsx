@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import {NavigationProp, RouteNames} from 'navigation/types';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {FlatList, View} from 'react-native';
 import {Button, Colors, Text} from 'react-native-paper';
 import {useSelector} from 'react-redux';
@@ -18,6 +18,10 @@ export const MusicScreen = () => {
   const {music, getMusic, search, filters, filter, clear} = useMusic();
   const [visible, setVisible] = useState<boolean>(false);
   const navigation = useNavigation<NavigationProp>();
+
+  useEffect(() => {
+    clear(true);
+  }, [clear]);
 
   const renderApp = useCallback(
     ({item}: {item: MusicCollection}) => {
@@ -60,7 +64,7 @@ export const MusicScreen = () => {
           />
         ) : (
           <>
-            <Text style={stylesCommon.noresults}>No results</Text>
+            <Text style={stylesCommon.noresults}>No music results</Text>
             <Text style={stylesCommon.noresults}>Have you set filters?</Text>
           </>
         )}

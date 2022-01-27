@@ -41,6 +41,13 @@ export const updateMusicFilters = createAction(
   }),
 )();
 
+export const clearMusicFilters = createAction(
+  'CLEAR_MUSIC_FILTERS',
+  (checked?: boolean) => ({
+    checked,
+  }),
+)();
+
 export type MusicActionTypes = ActionType<
   | typeof setMusicCollection
   | typeof clearMusicCollection
@@ -49,4 +56,5 @@ export type MusicActionTypes = ActionType<
   | typeof fetchMusic
   | typeof setMusicFilters
   | typeof updateMusicFilters
+  | typeof clearMusicFilters
 >;

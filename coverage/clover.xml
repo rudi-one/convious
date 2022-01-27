@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643241479140" clover="3.2.0">
-  <project timestamp="1643241479141" name="All files">
-    <metrics statements="234" coveredstatements="173" conditionals="41" coveredconditionals="23" methods="70" coveredmethods="45" elements="345" coveredelements="241" complexity="0" loc="234" ncloc="234" packages="17" files="38" classes="38"/>
+<coverage generated="1643314360911" clover="3.2.0">
+  <project timestamp="1643314360911" name="All files">
+    <metrics statements="268" coveredstatements="256" conditionals="45" coveredconditionals="41" methods="77" coveredmethods="71" elements="390" coveredelements="368" complexity="0" loc="268" ncloc="268" packages="17" files="40" classes="40"/>
     <package name="api">
       <metrics statements="8" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="4"/>
       <file name="const.ts" path="/Users/michal/projects/Convious/src/api/const.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="5" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/michal/projects/Convious/src/api/index.ts">
         <metrics statements="7" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="4"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
@@ -104,116 +104,151 @@
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
       <file name="useApps.ts" path="/Users/michal/projects/Convious/src/hooks/useApps.ts">
-        <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="26" count="112" type="stmt"/>
-        <line num="30" count="7" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="5" type="stmt"/>
-        <line num="44" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="55" count="5" type="stmt"/>
-        <line num="56" count="5" type="stmt"/>
-        <line num="59" count="5" type="stmt"/>
+        <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="6" type="stmt"/>
+      </file>
+      <file name="useMusic.ts" path="/Users/michal/projects/Convious/src/hooks/useMusic.ts">
+        <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="6" type="stmt"/>
       </file>
     </package>
     <package name="mocks">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="mockApps.ts" path="/Users/michal/projects/Convious/src/mocks/mockApps.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="8" type="stmt"/>
-        <line num="142" count="8" type="stmt"/>
-        <line num="287" count="8" type="stmt"/>
-        <line num="289" count="8" type="stmt"/>
-        <line num="295" count="8" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="142" count="9" type="stmt"/>
+        <line num="287" count="9" type="stmt"/>
+        <line num="289" count="9" type="stmt"/>
+        <line num="323" count="9" type="stmt"/>
+        <line num="357" count="9" type="stmt"/>
+        <line num="364" count="9" type="stmt"/>
+      </file>
+      <file name="mockMusic.ts" path="/Users/michal/projects/Convious/src/mocks/mockMusic.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="46" count="6" type="stmt"/>
+        <line num="87" count="6" type="stmt"/>
+        <line num="89" count="6" type="stmt"/>
+        <line num="131" count="6" type="stmt"/>
+        <line num="173" count="6" type="stmt"/>
+        <line num="180" count="6" type="stmt"/>
       </file>
       <file name="mockState.ts" path="/Users/michal/projects/Convious/src/mocks/mockState.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
       </file>
       <file name="mockUI.ts" path="/Users/michal/projects/Convious/src/mocks/mockUI.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
       </file>
     </package>
     <package name="redux">
       <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="RootReducer.ts" path="/Users/michal/projects/Convious/src/redux/RootReducer.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
       </file>
       <file name="RootSaga.ts" path="/Users/michal/projects/Convious/src/redux/RootSaga.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="3" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
       <file name="store.ts" path="/Users/michal/projects/Convious/src/redux/store.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
       </file>
     </package>
     <package name="redux.apps">
-      <metrics statements="51" coveredstatements="40" conditionals="11" coveredconditionals="7" methods="17" coveredmethods="11"/>
+      <metrics statements="56" coveredstatements="54" conditionals="12" coveredconditionals="12" methods="19" coveredmethods="18"/>
       <file name="actions.ts" path="/Users/michal/projects/Convious/src/redux/apps/actions.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="5" count="5" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="5" count="6" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="24" count="7" type="stmt"/>
-        <line num="28" count="5" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
       </file>
       <file name="reducer.ts" path="/Users/michal/projects/Convious/src/redux/apps/reducer.ts">
-        <metrics statements="21" coveredstatements="16" conditionals="11" coveredconditionals="7" methods="3" coveredmethods="2"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="21" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="20" type="stmt"/>
-        <line num="23" count="20" type="cond" truecount="4" falsecount="2"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="1" type="stmt"/>
+        <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="23" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="37" type="stmt"/>
+        <line num="25" count="37" type="cond" truecount="7" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="16" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="32" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
       </file>
       <file name="sagas.ts" path="/Users/michal/projects/Convious/src/redux/apps/sagas.ts">
         <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
@@ -231,103 +266,108 @@
         <line num="39" count="0" type="stmt"/>
       </file>
       <file name="selectors.ts" path="/Users/michal/projects/Convious/src/redux/apps/selectors.ts">
-        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
       </file>
     </package>
     <package name="redux.music">
-      <metrics statements="58" coveredstatements="16" conditionals="11" coveredconditionals="1" methods="17" coveredmethods="2"/>
+      <metrics statements="63" coveredstatements="61" conditionals="12" coveredconditionals="12" methods="19" coveredmethods="18"/>
       <file name="actions.ts" path="/Users/michal/projects/Convious/src/redux/music/actions.ts">
-        <metrics statements="12" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
       </file>
       <file name="reducer.ts" path="/Users/michal/projects/Convious/src/redux/music/reducer.ts">
-        <metrics statements="21" coveredstatements="4" conditionals="11" coveredconditionals="1" methods="3" coveredmethods="2"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="21" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="20" type="stmt"/>
-        <line num="23" count="20" type="cond" truecount="0" falsecount="6"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
+        <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="23" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="37" type="stmt"/>
+        <line num="25" count="37" type="cond" truecount="7" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="21" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="42" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
       </file>
       <file name="sagas.ts" path="/Users/michal/projects/Convious/src/redux/music/sagas.ts">
-        <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
       </file>
       <file name="selectors.ts" path="/Users/michal/projects/Convious/src/redux/music/selectors.ts">
-        <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="24" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
       </file>
     </package>
     <package name="redux.ui.loading">
       <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="actions.ts" path="/Users/michal/projects/Convious/src/redux/ui/loading/actions.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
       </file>
       <file name="reducer.ts" path="/Users/michal/projects/Convious/src/redux/ui/loading/reducer.ts">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="26" type="stmt"/>
-        <line num="12" count="26" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="45" type="stmt"/>
+        <line num="12" count="45" type="cond" truecount="1" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
@@ -341,15 +381,15 @@
       <metrics statements="12" coveredstatements="12" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
       <file name="actions.ts" path="/Users/michal/projects/Convious/src/redux/ui/snackbar/actions.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
       </file>
       <file name="reducer.ts" path="/Users/michal/projects/Convious/src/redux/ui/snackbar/reducer.ts">
         <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="11" count="26" type="stmt"/>
-        <line num="12" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="45" type="stmt"/>
+        <line num="12" count="45" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
@@ -374,11 +414,11 @@
       <metrics statements="22" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="3"/>
       <file name="consts.ts" path="/Users/michal/projects/Convious/src/utils/consts.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="6" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
       </file>
       <file name="helpers.ts" path="/Users/michal/projects/Convious/src/utils/helpers.ts">
         <metrics statements="17" coveredstatements="11" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="3"/>

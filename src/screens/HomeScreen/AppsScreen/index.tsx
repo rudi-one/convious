@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import {NavigationProp, RouteNames} from 'navigation/types';
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {FlatList, View} from 'react-native';
 import {Button, Colors, Text} from 'react-native-paper';
 import {useSelector} from 'react-redux';
@@ -19,15 +19,22 @@ export const AppsScreen = () => {
   const [visible, setVisible] = useState<boolean>(false);
   const navigation = useNavigation<NavigationProp>();
 
-  const renderApp = ({item}: {item: AppCollection}) => {
-    return (
-      <ListElement
-        item={item}
-        imageUrl={item.artworkUrl512}
-        navigate={() => navigation.navigate(RouteNames.app, {app: item})}
-      />
-    );
-  };
+  useEffect(() => {
+    clear(true);
+  }, [clear]);
+
+  const renderApp = useCallback(
+    ({item}: {item: AppCollection}) => {
+      return (
+        <ListElement
+          item={item}
+          imageUrl={item.artworkUrl512}
+          navigate={() => navigation.navigate(RouteNames.app, {app: item})}
+        />
+      );
+    },
+    [navigation],
+  );
 
   const ListFooter = () => {
     return (
@@ -56,7 +63,7 @@ export const AppsScreen = () => {
           />
         ) : (
           <>
-            <Text style={stylesCommon.noresults}>No results</Text>
+            <Text style={stylesCommon.noresults}>No apps results</Text>
             <Text style={stylesCommon.noresults}>Have you set filters?</Text>
           </>
         )}

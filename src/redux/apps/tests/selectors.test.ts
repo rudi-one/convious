@@ -1,6 +1,12 @@
-import {mockAppsCollection} from 'src/mocks/mockApps';
+import {mockAppsCollection, mockAppsFiltersChecked} from 'src/mocks/mockApps';
 import {mockState} from 'src/mocks/mockState';
-import {selectApps, selectOffset, selectTerm} from 'store/apps/selectors';
+import {
+  selectApps,
+  selectFilteredApps,
+  selectFilters,
+  selectOffset,
+  selectTerm,
+} from 'store/apps/selectors';
 
 describe('Store apps', () => {
   it('should match selectApps selector', () => {
@@ -17,5 +23,15 @@ describe('Store apps', () => {
     const term = selectTerm(mockState);
 
     expect(term).toStrictEqual(mockState.appsState.term);
+  });
+  it('should match selectFilters selector', () => {
+    const filters = selectFilters(mockState);
+
+    expect(filters).toStrictEqual(mockAppsFiltersChecked);
+  });
+  it('should match selectFilteredApps selector', () => {
+    const filters = selectFilteredApps(mockState);
+
+    expect(filters).toStrictEqual(mockAppsCollection);
   });
 });

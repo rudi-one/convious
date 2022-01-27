@@ -27,7 +27,6 @@ export interface MusicCollection extends CommonCollection {
   trackId: number;
   trackName: string;
   trackNumber: number;
-  trackPrice: string;
   trackTimeMillis: number;
   trackViewUrl: string;
 }

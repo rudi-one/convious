@@ -1,52 +1,52 @@
 import {renderHook} from '@testing-library/react-hooks';
 import {useDispatch} from 'react-redux';
-import useApps from 'src/hooks/useApps';
-import {APPS_CATEGORIES} from 'src/utils/consts';
+import useMusic from 'src/hooks/useMusic';
+import {MUSIC_CATEGORIES} from 'src/utils/consts';
 
-describe('useApps hook test', () => {
-  it('getApps function should dispatch fetching apps', () => {
+describe('useMusic hook test', () => {
+  it('getMusic function should dispatch fetching music', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const {result} = renderHook(() => useApps());
+    const {result} = renderHook(() => useMusic());
 
-    result.current.getApps();
+    result.current.getMusic();
 
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith({
-      type: 'FETCH_APPS',
+      type: 'FETCH_MUSIC',
     });
   });
   it('search function should dispatch proper actions when queryText length > 3', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const queryText = 'uber';
-    const {result} = renderHook(() => useApps());
+    const queryText = 'lopez';
+    const {result} = renderHook(() => useMusic());
 
     result.current.search(queryText);
 
     expect(dispatchSpy).toBeCalledTimes(5);
     expect(dispatchSpy).toBeCalledWith({
-      type: 'CLEAR_APPS_COLLECTION',
+      type: 'CLEAR_MUSIC_COLLECTION',
     });
     expect(dispatchSpy).toBeCalledWith({
-      type: 'SET_OFFSET',
+      type: 'SET_MUSIC_OFFSET',
       payload: {
         offset: 0,
       },
     });
     expect(dispatchSpy).toBeCalledWith({
-      type: 'SET_TERM',
+      type: 'SET_MUSIC_QUERY',
       payload: {
-        term: queryText,
+        query: queryText,
       },
     });
     expect(dispatchSpy).toBeCalledWith({
-      type: 'FETCH_APPS',
+      type: 'FETCH_MUSIC',
     });
     expect(dispatchSpy).toBeCalledWith({
-      type: 'CLEAR_FILTERS',
+      type: 'CLEAR_MUSIC_FILTERS',
       payload: {
         checked: true,
       },
@@ -56,8 +56,8 @@ describe('useApps hook test', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const queryText = 'ube';
-    const {result} = renderHook(() => useApps());
+    const queryText = 'lop';
+    const {result} = renderHook(() => useMusic());
 
     result.current.search(queryText);
 
@@ -67,10 +67,10 @@ describe('useApps hook test', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const {result} = renderHook(() => useApps());
+    const {result} = renderHook(() => useMusic());
 
     const filter = {
-      name: APPS_CATEGORIES[0],
+      name: MUSIC_CATEGORIES[0],
       checked: true,
     };
 
@@ -78,7 +78,7 @@ describe('useApps hook test', () => {
 
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith({
-      type: 'UPDATE_FILTERS',
+      type: 'UPDATE_MUSIC_FILTERS',
       payload: {
         filter: filter,
       },
@@ -88,13 +88,13 @@ describe('useApps hook test', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const {result} = renderHook(() => useApps());
+    const {result} = renderHook(() => useMusic());
 
     result.current.clear(true);
 
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith({
-      type: 'CLEAR_FILTERS',
+      type: 'CLEAR_MUSIC_FILTERS',
       payload: {
         checked: true,
       },
@@ -104,13 +104,13 @@ describe('useApps hook test', () => {
     const dispatchSpy = jest.fn();
     jest.mocked(useDispatch).mockReturnValue(dispatchSpy);
 
-    const {result} = renderHook(() => useApps());
+    const {result} = renderHook(() => useMusic());
 
     result.current.clear(false);
 
     expect(dispatchSpy).toBeCalledTimes(1);
     expect(dispatchSpy).toBeCalledWith({
-      type: 'CLEAR_FILTERS',
+      type: 'CLEAR_MUSIC_FILTERS',
       payload: {
         checked: false,
       },

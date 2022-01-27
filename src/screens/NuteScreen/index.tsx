@@ -9,6 +9,7 @@ import {Image, Linking, Text, View} from 'react-native';
 import {Button} from 'react-native-paper';
 import SoundPlayer from 'react-native-sound-player';
 import {Loading} from 'src/components/Loading';
+import {isIOS} from 'src/utils/consts';
 import styles from './styles';
 
 const NuteScreen = () => {
@@ -64,17 +65,19 @@ const NuteScreen = () => {
           </Button>
         )}
       </View>
-      <View style={styles.buttons}>
-        <Button
-          mode="contained"
-          icon={'play'}
-          onPress={() => play(item?.previewUrl)}>
-          Play
-        </Button>
-        <Button mode="contained" icon={'stop'} onPress={() => stop()}>
-          Stop
-        </Button>
-      </View>
+      {isIOS && (
+        <View style={styles.buttons}>
+          <Button
+            mode="contained"
+            icon={'play'}
+            onPress={() => play(item?.previewUrl)}>
+            Play
+          </Button>
+          <Button mode="contained" icon={'stop'} onPress={() => stop()}>
+            Stop
+          </Button>
+        </View>
+      )}
     </View>
   );
 };

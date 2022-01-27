@@ -5,7 +5,7 @@ interface ElementProps {
   imageUrl: string;
   item: AppCollection | MusicCollection;
   showArtist?: boolean;
-  navigate: any;
+  navigate: () => void;
 }
 
 export default ElementProps;

@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
   checkboxLabel: {
     fontSize: 18,
   },
+  checkbox: {
+    margin: 0,
+  },
 });
 
 export default styles;

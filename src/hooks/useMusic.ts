@@ -1,11 +1,10 @@
-import {useCallback, useEffect} from 'react';
+import {useCallback} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Filter} from 'src/components/Filters/types';
-import {MUSIC_CATEGORIES} from 'src/utils/consts';
 import {
   clearMusicCollection,
+  clearMusicFilters,
   fetchMusic,
-  setMusicFilters,
   setMusicOffset,
   setMusicQuery,
   updateMusicFilters,
@@ -23,11 +22,7 @@ const useMusic = () => {
 
   const clear = useCallback(
     (checked?: boolean) => {
-      const filters: Filter[] = MUSIC_CATEGORIES.map(category => ({
-        name: category,
-        checked: !!checked,
-      }));
-      dispatch(setMusicFilters(filters));
+      dispatch(clearMusicFilters(checked));
     },
     [dispatch],
   );
@@ -46,15 +41,11 @@ const useMusic = () => {
         dispatch(setMusicOffset(0));
         dispatch(setMusicQuery(text));
         dispatch(fetchMusic());
-        clear(true);
+        dispatch(clearMusicFilters(true));
       }
     },
-    [clear, dispatch],
+    [dispatch],
   );
-
-  useEffect(() => {
-    clear(true);
-  }, [clear]);
 
   return {music, getMusic, search, filters, filter, clear};
 };

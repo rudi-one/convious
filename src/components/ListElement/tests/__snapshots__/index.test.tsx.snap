@@ -4,7 +4,7 @@ exports[`<ListElement /> tests should match ListElement component snapshot 1`] =
 <View
   accessible={true}
   collapsable={false}
-  focusable={false}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -38,7 +38,7 @@ exports[`<ListElement /> tests should match ListElement component snapshot 1`] =
     <Image
       source={
         Object {
-          "uri": undefined,
+          "uri": "",
         }
       }
       style={

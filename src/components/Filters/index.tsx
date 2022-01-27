@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Dispatch, memo, SetStateAction} from 'react';
+import {Dispatch, memo, SetStateAction, useEffect, useRef} from 'react';
 import {Pressable, ScrollView, View} from 'react-native';
-import {Button, Checkbox, Colors, Dialog, Text} from 'react-native-paper';
+import {Button, Colors, Dialog, IconButton, Text} from 'react-native-paper';
 import {Filter} from 'src/components/Filters/types';
 import styles from './styles';
 
@@ -21,22 +21,35 @@ const FiltersComponent = ({
   clear,
 }: FiltersProps) => {
   const hideDialog = () => setVisible(false);
+  const ref = useRef<ScrollView | null>(null);
+
+  useEffect(() => {
+    if (visible) {
+      ref.current?.flashScrollIndicators();
+    }
+  }, [visible]);
 
   return (
     <Dialog visible={visible} onDismiss={hideDialog} style={styles.dialog}>
       <Dialog.Title>Filters (click to filter)</Dialog.Title>
       <Dialog.ScrollArea>
-        <ScrollView contentContainerStyle={{paddingHorizontal: 24}}>
+        <ScrollView
+          contentContainerStyle={{paddingHorizontal: 14}}
+          showsVerticalScrollIndicator={true}
+          ref={ref}>
           {filters?.map(item => (
             <Pressable
               onPress={() => filter({name: item.name, checked: !item.checked})}
               key={item.name}>
               <View style={styles.checkboxWrapper}>
                 <Text style={styles.checkboxLabel}>{item.name}</Text>
-                <Checkbox
-                  status={item.checked ? 'checked' : 'unchecked'}
+                <IconButton
+                  icon={
+                    item.checked ? 'checkbox-marked' : 'checkbox-blank-outline'
+                  }
+                  size={24}
                   color={Colors.greenA700}
-                  uncheckedColor={Colors.red500}
+                  style={styles.checkbox}
                 />
               </View>
             </Pressable>

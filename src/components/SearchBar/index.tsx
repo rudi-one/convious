@@ -5,7 +5,7 @@ import {SearchBarProps} from 'src/components/SearchBar/types';
 import styles from './styles';
 
 const SearchBarComponent = ({onSearch}: SearchBarProps) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // TODO add debouncing
   const onChangeSearch = useCallback(

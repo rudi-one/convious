@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.71% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -91,56 +91,56 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {RootState} from 'store/RootReducer';
 &nbsp;
-export const selectMusic = <span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; {
-<span class="cstat-no" title="statement not covered" >  return state.musicState.musicCollection;</span>
+export const selectMusic = (state: RootState) =&gt; {
+  return state.musicState.musicCollection;
 };
 &nbsp;
-export const selectFilteredMusic = <span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; {
-  const music = <span class="cstat-no" title="statement not covered" >selectMusic(state);</span>
-  const filters = <span class="cstat-no" title="statement not covered" >selectMusicFilters(state);</span>
+export const selectFilteredMusic = (state: RootState) =&gt; {
+  const music = selectMusic(state);
+  const filters = selectMusicFilters(state);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return music.filter(</span>
-<span class="fstat-no" title="function not covered" >    it</span>em =&gt;
-<span class="cstat-no" title="statement not covered" >      filters.find(<span class="fstat-no" title="function not covered" >fi</span>lter =&gt; <span class="cstat-no" title="statement not covered" >filter.name === item.primaryGenreName)</span>?.checked,</span>
+  return music.filter(
+    item =&gt;
+      filters.find(filter =&gt; filter.name === item.primaryGenreName)?.checked,
   );
 };
 &nbsp;
-export const selectMusicOffset = <span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; {
-<span class="cstat-no" title="statement not covered" >  return state.musicState.offset;</span>
+export const selectMusicOffset = (state: RootState) =&gt; {
+  return state.musicState.offset;
 };
 &nbsp;
-export const selectMusicQuery = <span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt; {
-<span class="cstat-no" title="statement not covered" >  return state.musicState.query;</span>
+export const selectMusicQuery = (state: RootState) =&gt; {
+  return state.musicState.query;
 };
 &nbsp;
-export const selectMusicFilters = <span class="fstat-no" title="function not covered" >(s</span>tate: RootState) =&gt;
-<span class="cstat-no" title="statement not covered" >  state.musicState.filters;</span>
+export const selectMusicFilters = (state: RootState) =&gt;
+  state.musicState.filters;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -148,7 +148,7 @@ export const selectMusicFilters = <span class="fstat-no" title="function not cov
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jan 26 2022 23:57:59 GMT+0000 (Coordinated Universal Time)
+                at Thu Jan 27 2022 20:12:40 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

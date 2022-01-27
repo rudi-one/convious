@@ -1,8 +1,10 @@
 import {produce} from 'immer';
+import {APPS_CATEGORIES} from 'src/utils/consts';
 import {getType} from 'typesafe-actions';
 import {
   AppsActionTypes,
   clearAppsCollection,
+  clearFiters,
   setAppsCollection,
   setFilters,
   setOffset,
@@ -57,6 +59,15 @@ const AppReducer = (state = initalState, action: AppsActionTypes) => {
             filterToUpdate.name === filter.name
               ? filterToUpdate.checked
               : filter.checked,
+        }));
+        break;
+      }
+      case getType(clearFiters): {
+        const checked = action.payload.checked;
+
+        state.filters = APPS_CATEGORIES.map(category => ({
+          name: category,
+          checked: !!checked,
         }));
         break;
       }

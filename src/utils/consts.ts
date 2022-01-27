@@ -43,4 +43,5 @@ export const MUSIC_CATEGORIES = [
   'Latin',
   'Pop Latino',
   'Techno',
+  'Soundtrack',
 ];
