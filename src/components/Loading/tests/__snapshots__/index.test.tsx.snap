@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> tests should match Loading component snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 27.5,
+      },
+      null,
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#c62828"
+    size="large"
+  />
+</View>
+`;
+
+exports[`<Loading /> tests should match Loading component snapshot with property 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "padding": 27.5,
+      },
+      Object {
+        "alignItems": "center",
+        "height": "100%",
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": "100%",
+        "zIndex": 10,
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#c62828"
+    size="large"
+  />
+</View>
+`;

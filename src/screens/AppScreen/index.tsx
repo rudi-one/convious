@@ -5,8 +5,9 @@ import {
   RouteNames,
 } from 'navigation/types';
 import React, {useEffect} from 'react';
-import {FlatList, Image, ScrollView, Text, View} from 'react-native';
-import Loading from 'src/components/Loading';
+import {FlatList, Image, Linking, ScrollView, Text, View} from 'react-native';
+import {Button} from 'react-native-paper';
+import {Loading} from 'src/components/Loading';
 import {ScreenShotImage} from 'src/components/ScreenShotImage';
 import {ScreenShotProp} from 'src/components/ScreenShotImage/types';
 import {getScreenShotUrlsObject} from 'src/screens/AppScreen/helpers';
@@ -39,11 +40,14 @@ const AppScreen = () => {
         <View style={styles.information}>
           <Text style={styles.genre}>{app?.primaryGenreName}</Text>
           <Text style={styles.title}>{app?.trackCensoredName}</Text>
-          <Text>Seller: {app?.sellerName}</Text>
-          <Text>Version: {app?.version}</Text>
-          <Text>Min OS Version: {app?.minimumOsVersion}</Text>
-          <Text>Content rating: {app?.contentAdvisoryRating}</Text>
-          <Text>Rating: {app?.averageUserRating.toFixed(1)}</Text>
+          <Text style={styles.seller}>{app?.sellerName}</Text>
+          <Text style={styles.version}>Version: {app?.version}</Text>
+          <Text style={styles.contentRating}>
+            Content rating: {app?.contentAdvisoryRating}
+          </Text>
+          <Text style={styles.rating}>
+            Rating: {app?.averageUserRating.toFixed(1)}
+          </Text>
         </View>
       </View>
       <View>
@@ -56,9 +60,17 @@ const AppScreen = () => {
           keyExtractor={(item, index) => `${index}-${item.url}`}
         />
       </View>
-      <View style={styles.description}>
-        <Text>{app?.description}</Text>
-        {/*<Text>{app?.supportedDevices}</Text>*/}
+      {app?.sellerUrl && (
+        <Button
+          icon={'apple'}
+          onPress={() => {
+            Linking.openURL(app.sellerUrl);
+          }}>
+          Go to {app?.sellerName}
+        </Button>
+      )}
+      <View style={styles.descriptionContainer}>
+        <Text style={styles.description}>{app?.description}</Text>
       </View>
     </ScrollView>
   );

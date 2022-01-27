@@ -31,6 +31,18 @@ const styles = StyleSheet.create({
     color: Colors.black,
     paddingVertical: verticalScale(5),
   },
+  seller: {
+    lineHeight: 24,
+  },
+  version: {
+    lineHeight: 22,
+  },
+  contentRating: {
+    lineHeight: 22,
+  },
+  rating: {
+    lineHeight: 22,
+  },
   image: {
     width: moderateScale(80),
     height: moderateScale(80),
@@ -53,11 +65,15 @@ const styles = StyleSheet.create({
     right: moderateScale(10),
     bottom: 0,
   },
-  description: {
+  descriptionContainer: {
     backgroundColor: Colors.white,
     borderRadius: 8,
     margin: moderateScale(10),
     padding: moderateScale(12),
+  },
+  description: {
+    fontSize: 16,
+    lineHeight: 24,
   },
 });
 

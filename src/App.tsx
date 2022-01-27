@@ -1,14 +1,18 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {ErrorBoundary} from 'react-error-boundary';
+import {LogBox} from 'react-native';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import FatalError from 'src/components/FatalError';
+import {FatalError} from 'src/components/FatalError';
+import {Snackbar} from 'src/components/Snackbar';
 import {RootNavigator} from 'src/navigation/RootNavigator';
 import {logJsError} from 'src/utils/helpers';
 import {persistor, store} from 'store/store';
 import SafeArea from './components/SafeArea';
+
+LogBox.ignoreAllLogs(true);
 
 const theme = {
   ...DefaultTheme,
@@ -26,6 +30,7 @@ const Content = () => {
         <NavigationContainer>
           <RootNavigator />
         </NavigationContainer>
+        <Snackbar />
       </SafeArea>
     </PaperProvider>
   );

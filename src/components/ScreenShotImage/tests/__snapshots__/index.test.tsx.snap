@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScreenShotImage /> tests should match ScreenShotImage component snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 628,
+      "justifyContent": "center",
+      "width": 439.5,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/7d/94/dd/7d94ddff-2276-3fc2-65d9-a0e74fc63ce6/a3bfbfa4-3fd7-4391-8bf3-ae9e974acbed_en-US_iPhone_8_Plus_01_trips.png/392x696bb.png",
+      }
+    }
+    style={
+      Object {
+        "height": 628,
+        "width": 428.5,
+      }
+    }
+  />
+</View>
+`;

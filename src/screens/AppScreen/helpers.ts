@@ -1,13 +1,13 @@
-import {ScreenShotProp} from 'src/screens/AppScreen/type';
-import {AppsCollection} from 'store/apps/types';
+import {ScreenShotProp} from 'src/components/ScreenShotImage/types';
+import {AppCollection} from 'store/apps/types';
 
 export const getScreenShotUrlsObject = (
-  app?: AppsCollection,
+  app?: AppCollection,
 ): ScreenShotProp[] => {
-  const urls = app?.ipadScreenshotUrls.length
-    ? app?.ipadScreenshotUrls
-    : app?.screenshotUrls.length
+  const urls = app?.screenshotUrls.length
     ? app?.screenshotUrls
+    : app?.ipadScreenshotUrls.length
+    ? app?.ipadScreenshotUrls
     : [];
 
   return urls.map(item => ({url: item}));

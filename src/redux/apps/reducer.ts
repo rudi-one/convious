@@ -4,8 +4,10 @@ import {
   AppsActionTypes,
   clearAppsCollection,
   setAppsCollection,
+  setFilters,
   setOffset,
   setTerm,
+  updateFilters,
 } from './actions';
 import {AppsState} from './types';
 
@@ -13,6 +15,7 @@ const initalState: AppsState = {
   appsCollection: [],
   offset: 0,
   term: '',
+  filters: [],
 };
 
 const AppReducer = (state = initalState, action: AppsActionTypes) => {
@@ -39,6 +42,22 @@ const AppReducer = (state = initalState, action: AppsActionTypes) => {
       }
       case getType(setTerm): {
         state.term = action.payload.term;
+        break;
+      }
+      case getType(setFilters): {
+        state.filters = action.payload.filters;
+        break;
+      }
+      case getType(updateFilters): {
+        const filterToUpdate = action.payload.filter;
+
+        state.filters = state.filters?.map(filter => ({
+          ...filter,
+          checked:
+            filterToUpdate.name === filter.name
+              ? filterToUpdate.checked
+              : filter.checked,
+        }));
         break;
       }
     }

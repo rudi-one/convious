@@ -5,9 +5,7 @@ import styles from './styles';
 
 const SafeArea: React.FC = ({children}) => (
   <SafeAreaProvider>
-    <SafeAreaView
-      style={styles.safeAreaStyle}
-      edges={['left', 'right', 'bottom', 'top']}>
+    <SafeAreaView style={styles.safeAreaStyle} edges={['left', 'right']}>
       {children}
     </SafeAreaView>
   </SafeAreaProvider>

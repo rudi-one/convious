@@ -1,25 +1,23 @@
+import {CommonCollection} from 'src/common/types';
+import {Filter} from 'src/components/Filters/types';
+
 export type AppsState = {
-  appsCollection: AppsCollection[];
+  appsCollection: AppCollection[];
   offset: number;
   term: string;
+  filters: Filter[];
 };
 
-export interface AppsCollection {
-  artworkUrl60: string;
+export interface AppCollection extends CommonCollection {
   artworkUrl512: string;
-  artworkUrl100: string;
-  artistViewUrl: string;
   screenshotUrls: string[];
   ipadScreenshotUrls: string[];
   appletvScreenshotUrls: [];
   isGameCenterEnabled: false;
-  features: [];
+  features: string[];
   supportedDevices: string[];
   advisories: string[];
-  kind: string;
-  trackViewUrl: string;
   minimumOsVersion: string;
-  trackCensoredName: string;
   languageCodesISO2A: string[];
   fileSizeBytes: string;
   sellerUrl: string;
@@ -31,22 +29,14 @@ export interface AppsCollection {
   trackContentRating: string;
   bundleId: string;
   primaryGenreId: number;
-  trackId: number;
-  trackName: string;
-  releaseDate: string;
-  primaryGenreName: string;
-  genreIds: number[];
+  genreIds: string[];
   isVppDeviceBasedLicensingEnabled: boolean;
   currentVersionReleaseDate: string;
   sellerName: string;
   releaseNotes: string;
-  currency: string;
   description: string;
-  artistId: number;
-  artistName: string;
   genres: string[];
   price: number;
   version: string;
-  wrapperType: string;
   userRatingCount: number;
 }

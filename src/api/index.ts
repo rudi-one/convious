@@ -1,35 +1,7 @@
-import axios, {AxiosError, AxiosInstance, AxiosResponse} from 'axios';
+import axios, {AxiosInstance, AxiosResponse} from 'axios';
 import qs from 'qs';
 import {GATEWAY_URL} from 'src/api/const';
 import urljoin from 'url-join';
-import {
-  APIErrorDetails,
-  APIErrorPayload,
-  CustomAxiosRequestConfig,
-} from './types';
-
-export class APIError extends Error {
-  details: APIErrorDetails;
-  status: number;
-  code?: number;
-  originalError: AxiosError<APIErrorPayload>;
-  config?: CustomAxiosRequestConfig;
-
-  constructor(error: AxiosError<APIErrorPayload>) {
-    if (!error.response || !error.response.data) {
-      super(error.message);
-      this.details = {};
-      this.status = 0;
-    } else {
-      const {details, message}: APIErrorPayload = error.response!.data;
-      super(message || error.message);
-      this.details = details || {};
-      this.status = error.response!.status;
-    }
-
-    this.originalError = error;
-  }
-}
 
 export default class Api {
   axios: AxiosInstance;
@@ -41,7 +13,7 @@ export default class Api {
     this.axios.interceptors.response.use(
       response => response,
       error => {
-        return Promise.reject(new APIError(error));
+        return Promise.reject(new Error(error));
       },
     );
   }

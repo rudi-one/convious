@@ -1,11 +1,11 @@
-import React from 'react';
-import {ActivityIndicator, Text, View} from 'react-native';
+import React, {memo} from 'react';
+import {ActivityIndicator, View} from 'react-native';
 import {Colors} from 'react-native-paper';
 import stylesCommon from 'src/common/style';
 import {LoadingProps} from 'src/components/Loading/types';
 import styles from './styles';
 
-const Loading = ({mode}: LoadingProps) => {
+const LoadingComponent = ({mode}: LoadingProps) => {
   return (
     <View
       style={[
@@ -17,8 +17,7 @@ const Loading = ({mode}: LoadingProps) => {
         color={Colors.red800}
         size={'large'}
       />
-      <Text style={styles.text}>loading...</Text>
     </View>
   );
 };
-export default Loading;
+export const Loading = memo(LoadingComponent);

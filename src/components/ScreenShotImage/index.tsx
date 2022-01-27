@@ -6,12 +6,14 @@ import {ScreenShotProp} from './types';
 const ScreenShotImageComponent = ({item}: {item: ScreenShotProp}) => {
   return (
     <View style={styles.screenshotContainer}>
-      <Image
-        source={{
-          uri: item.url,
-        }}
-        style={styles.screenshot}
-      />
+      {item?.url && (
+        <Image
+          source={{
+            uri: item.url,
+          }}
+          style={styles.screenshot}
+        />
+      )}
     </View>
   );
 };

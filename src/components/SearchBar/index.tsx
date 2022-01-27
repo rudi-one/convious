@@ -1,26 +1,31 @@
-import React, {useState} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {View} from 'react-native';
-import {Searchbar as PaperSearchbar} from 'react-native-paper';
+import {Searchbar} from 'react-native-paper';
 import {SearchBarProps} from 'src/components/SearchBar/types';
 import styles from './styles';
 
-const SearchBar = ({onSearch}: SearchBarProps) => {
+const SearchBarComponent = ({onSearch}: SearchBarProps) => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const onChangeSearch = (query: string) => {
-    setSearchQuery(query);
-    onSearch(query);
-  };
+  // TODO add debouncing
+  const onChangeSearch = useCallback(
+    (query: string) => {
+      setSearchQuery(query);
+      onSearch(query);
+    },
+    [onSearch],
+  );
 
   return (
     <View style={styles.container}>
-      <PaperSearchbar
-        placeholder="Search"
+      <Searchbar
+        placeholder="Search / type 4 chars"
         onChangeText={onChangeSearch}
         value={searchQuery}
+        testID=" searchbar"
       />
     </View>
   );
 };
 
-export default SearchBar;
+export const SearchBar = memo(SearchBarComponent);

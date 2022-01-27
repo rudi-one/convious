@@ -3,18 +3,25 @@ import React from 'react';
 import {Colors, IconButton} from 'react-native-paper';
 
 import {RouteNames} from 'src/navigation/types';
-import {AlbumsScreen} from 'src/screens/HomeScreen/AlbumsScreen';
 import {AppsScreen} from 'src/screens/HomeScreen/AppsScreen';
-import {MoviesScreen} from 'src/screens/HomeScreen/MoviesScreen';
+import CreditsScreen from 'src/screens/HomeScreen/CreditsScreen';
+import {MusicScreen} from 'src/screens/HomeScreen/MusicScreen';
+import {isIOS} from 'src/utils/consts';
+import {verticalScale} from 'src/utils/helpers';
 
 export const HomeBottomTabsNavigator = createBottomTabNavigator();
+
+const tabBarLabelStyle = {
+  fontSize: 14,
+  paddingBottom: verticalScale(8),
+};
 
 export function HomeScreen() {
   return (
     <HomeBottomTabsNavigator.Navigator
       screenOptions={{
         tabBarActiveTintColor: 'red',
-        tabBarStyle: {height: 70},
+        tabBarStyle: {height: isIOS ? 95 : 80},
       }}>
       <HomeBottomTabsNavigator.Screen
         component={AppsScreen}
@@ -22,46 +29,43 @@ export function HomeScreen() {
           title: 'App Store Apps',
           tabBarLabel: 'Apps',
           tabBarIcon: () => {
-            return <IconButton icon="apple" color={Colors.red500} size={30} />;
+            return <IconButton icon="apple" color={Colors.red500} size={26} />;
           },
-          tabBarLabelStyle: {
-            fontSize: 16,
-            paddingBottom: 5,
+          tabBarLabelStyle: tabBarLabelStyle,
+        }}
+        name={RouteNames.apps}
+      />
+      <HomeBottomTabsNavigator.Screen
+        component={MusicScreen}
+        options={{
+          title: 'Music',
+          tabBarLabel: 'Music',
+          tabBarIcon: () => {
+            return (
+              <IconButton icon="music-note" color={Colors.red500} size={26} />
+            );
           },
+          tabBarLabelStyle: tabBarLabelStyle,
         }}
         name={RouteNames.music}
       />
       <HomeBottomTabsNavigator.Screen
-        component={AlbumsScreen}
+        component={CreditsScreen}
         options={{
-          title: 'Albums',
-          tabBarLabel: 'Albums',
-          tabBarIcon: () => {
-            return <IconButton icon="album" color={Colors.red500} size={30} />;
-          },
-          tabBarLabelStyle: {
-            fontSize: 16,
-            paddingBottom: 5,
-          },
-        }}
-        name={RouteNames.albums}
-      />
-      <HomeBottomTabsNavigator.Screen
-        component={MoviesScreen}
-        options={{
-          title: 'Movies',
-          tabBarLabel: 'Movies',
+          title: 'Credits',
+          tabBarLabel: 'Credits',
           tabBarIcon: () => {
             return (
-              <IconButton icon="filmstrip" color={Colors.red500} size={30} />
+              <IconButton
+                icon="account-check"
+                color={Colors.red500}
+                size={26}
+              />
             );
           },
-          tabBarLabelStyle: {
-            fontSize: 16,
-            paddingBottom: 5,
-          },
+          tabBarLabelStyle: tabBarLabelStyle,
         }}
-        name={RouteNames.movies}
+        name={RouteNames.credits}
       />
     </HomeBottomTabsNavigator.Navigator>
   );
